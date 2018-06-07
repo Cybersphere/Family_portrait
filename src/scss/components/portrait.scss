@@ -88,6 +88,22 @@
     height: 5px;
     background-color: darkorange;
     border-radius: 0 50% 0 50%;
+
+    &.-angry {
+      transform:rotateZ(20deg);
+    }
+
+    &.-sad {
+      transform:rotateZ(-20deg);
+    }
+
+    &.-bold {
+      height: 9px;
+    }
+
+    &.-square {
+      border-radius: 0;
+    }
   }
 
   &__eye {
@@ -102,6 +118,19 @@
 
       #{$this}__eyebrow {
         left: -5px;
+
+        &.-angry {
+          transform:rotateZ(-20deg);
+        }
+
+        &.-sad {
+          transform:rotateZ(20deg);
+        }
+
+        &.-bold {
+          height: 9px;
+        }
+
       }
     }
 
@@ -112,6 +141,10 @@
       #{$this}__eyebrow {
         right: -5px;
         border-radius: 50% 0 50% 0;
+
+        &.-square {
+          border-radius: 0;
+        }
       }
     }
   }
